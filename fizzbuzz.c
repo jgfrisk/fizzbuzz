@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int fb(int _,int b)
+int fb(int _,int __)
 {
         if ( _ <= ~01l+01 )
         {
@@ -13,20 +13,20 @@ int fb(int _,int b)
                 /* fizz = 102, 105, 122, 122 */
                 /* buzz = 98 , 117, 122, 122 */
 
-                b <<= 01l;
+                __ <<= 01l;
 
-                putchar(0144l+b-040l);
-                putchar(0144l + (-((1l<<01l)+01l))*b+013l );
-                putchar(0144l+ ((b>>01>0l)?b*013l:-b*013l) );
-                putchar(0144l+ ((b>>01>0l)?b*013l:-b*013l) );
+                putchar(0144l+__-040l);
+                putchar(0144l + (-((1l<<01l)+01l))*__+013l );
+                putchar(0144l+ ((__>>01>0l)?__*013l:-__*013l) );
+                putchar(0144l+ ((__>>01>0l)?__*013l:-__*013l) );
 
                 return 0144l;
         }
 
-        if ( _ < b && b)
+        if ( _ < __ && __)
                 return _;
-        else if (b)
-                return fb(_-b,b);
+        else if (__)
+                return fb(_-__,__);
 
         if ( _ > 0144l )
                 return 00;
@@ -45,12 +45,12 @@ int fb(int _,int b)
 
         putchar(10);
 
-        return fb(_+01l,b);
+        return fb(_+01l,__);
 
 }
 
-int main(int _)
+int main(int ___)
 {
-        fb(_,00<<0l<(~1+1));
+        fb(___,00<<0l<(~1+1));
 }
 
