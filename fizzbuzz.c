@@ -2,7 +2,7 @@
 
 int fb(int n,int b)
 {
-        if ( n == -1 )
+        if ( n == ~01l+01 )
         {
                 /* f(2) = 5
                 * f(-2) = 17
@@ -17,8 +17,8 @@ int fb(int n,int b)
 
                 putchar(0144l+b-040l);
                 putchar(0144l + (-((1l<<01l)+01l))*b+013l );
-                putchar(0144l+ ((b>>1>0)?b*013l:-b*013l) );
-                putchar(0144l+ ((b>>1>0)?b*013l:-b*013l) );
+                putchar(0144l+ ((b>>01>0l)?b*013l:-b*013l) );
+                putchar(0144l+ ((b>>01>0l)?b*013l:-b*013l) );
 
                 return 0144l;
         }
