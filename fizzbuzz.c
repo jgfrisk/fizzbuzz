@@ -1,37 +1,39 @@
 #include <stdio.h>
 
-int mod(int a,int b)
+int mod(int n,int b)
 {
-	if ( a < b )
-		return a;
-	else
-		return mod(a-b,b);
-}
+	if ( n < b && b)
+		return n;
+	else if (b)
+		return mod(n-b,b);
 
-int main(int n, char *s[])
-{
-	if ( n > 100 )
+        if ( n > 100 )
 		return 0;
 
-	if ( mod(n,15) == 0 )
+	int nn = mod(n,3);
+
+	if ( nn == 0 )
 	{
-		puts("FizzBuzz");
+		printf("Fizz");
 	}
-	else if ( mod(n,3) == 0 )
+	if ( mod(n,5) == 0 )
 	{
-		puts("Fizz");
+		printf("Buzz");
 	}
-	else if ( mod(n,5) == 0 )
+	else if ( nn != 0)
 	{
-		puts("Buzz");
-	}
-	else
-	{
-		printf("%d\n",n);
+		printf("%d",n);
+
 	}
 
-	main(n+1,NULL);
+	puts("");
 
+	return mod(n+1,b);
 
+}
+
+int main(int n)
+{
+	mod(n,0);
 }
 
