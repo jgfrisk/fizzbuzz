@@ -1,56 +1,56 @@
 #include <stdio.h>
 
-int _fb(int b)
-
-{
-	/* f(2) = 5
-	 * f(-2) = 17
-	 *
-	 * f(x) = -3x+11
-	 */
-
-	/* fizz = 102, 105, 122, 122 */
-	/* buzz = 98 , 117, 122, 122 */
-
-	b <<= 01l;
-
-	putchar(0144l+b-040l);
-	putchar(0144l + (-((1l<<01l)+01l))*b+013l );
-	putchar(0144l+ ((b>>1>0)?b*013l:-b*013l) );
-	putchar(0144l+ ((b>>1>0)?b*013l:-b*013l) );
-
-}
-
 int fb(int n,int b)
 {
-	if ( n < b && b)
-		return n;
-	else if (b)
-		return fb(n-b,b);
+        if ( n == -1 )
+        {
+                /* f(2) = 5
+                * f(-2) = 17
+                *
+                * f(x) = -3x+11
+                */
+
+                /* fizz = 102, 105, 122, 122 */
+                /* buzz = 98 , 117, 122, 122 */
+
+                b <<= 01l;
+
+                putchar(0144l+b-040l);
+                putchar(0144l + (-((1l<<01l)+01l))*b+013l );
+                putchar(0144l+ ((b>>1>0)?b*013l:-b*013l) );
+                putchar(0144l+ ((b>>1>0)?b*013l:-b*013l) );
+
+                return 0144l;
+        }
+
+        if ( n < b && b)
+                return n;
+        else if (b)
+                return fb(n-b,b);
 
         if ( n > 0144l )
-		return 00;
+                return 00;
 
-	!fb(n, (01l<<01l)+01l)?_fb(01l<<00):0144l;
+        !fb(n, (01l<<01l)+01l)?fb(-1,01l<<00):0144l;
 
-	if ( fb(n,(01l<<02l)+01l) == 00 )
-	{
-		_fb(-1);
-	}
-	else if ( fb(n, (01l<<01l)+01l ))
-	{
-		printf("%d",n);
+        if ( fb(n,(01l<<02l)+01l) == 00 )
+        {
+                fb(-1,-1);
+        }
+        else if ( fb(n, (01l<<01l)+01l ))
+        {
+                printf("%d",n);
 
-	}
+        }
 
-	puts("");
+        puts("");
 
-	return fb(n+01l,b);
+        return fb(n+01l,b);
 
 }
 
-int main(int n)
+int main(int _)
 {
-	fb(n,00);
+        fb(_,00);
 }
 
