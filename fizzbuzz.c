@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int fb(int n,int b)
+int fb(int _,int b)
 {
-        if ( n <= ~01l+01 )
+        if ( _ <= ~01l+01 )
         {
                 /* f(2) = 5
                 * f(-2) = 17
@@ -23,29 +23,29 @@ int fb(int n,int b)
                 return 0144l;
         }
 
-        if ( n < b && b)
-                return n;
+        if ( _ < b && b)
+                return _;
         else if (b)
-                return fb(n-b,b);
+                return fb(_-b,b);
 
-        if ( n > 0144l )
+        if ( _ > 0144l )
                 return 00;
 
-        !fb(n, (01l<<01l)+01l)?fb(~01+01l,01l<<00):0144l;
+        !fb(_, (01l<<01l)+01l)?fb(~01+01l,01l<<00):0144l;
 
-        if ( fb(n,(01l<<02l)+01l) == 00 )
+        if ( fb(_,(01l<<02l)+01l) == 00 )
         {
                 fb(~1l+01,~01+1l);
         }
-        else if ( fb(n, (01l<<01l)+01l ))
+        else if ( fb(_, (01l<<01l)+01l ))
         {
-                printf("%d",n);
+                printf("%d",_);
 
         }
 
         putchar(10);
 
-        return fb(n+01l,b);
+        return fb(_+01l,b);
 
 }
 
