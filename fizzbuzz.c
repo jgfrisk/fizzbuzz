@@ -2,7 +2,7 @@
 
 int fb(int n,int b)
 {
-        if ( n == ~01l+01 )
+        if ( n <= ~01l+01 )
         {
                 /* f(2) = 5
                 * f(-2) = 17
@@ -43,7 +43,7 @@ int fb(int n,int b)
 
         }
 
-        puts("");
+        putchar(10);
 
         return fb(n+01l,b);
 
