@@ -31,9 +31,8 @@ int fb(int n,int b)
         if ( n > 0144l )
 		return 0;
 
-	int nn = fb(n,3);
 
-	if ( !nn )
+	if ( ! fb(n, (01l<<01l)+01l ))
 	{
 		_fb(1);
 	}
@@ -41,7 +40,7 @@ int fb(int n,int b)
 	{
 		_fb(-1);
 	}
-	else if ( nn )
+	else if ( fb(n, (01l<<01l)+01l ))
 	{
 		printf("%d",n);
 
