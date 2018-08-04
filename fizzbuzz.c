@@ -31,11 +31,8 @@ int fb(int n,int b)
         if ( n > 0144l )
 		return 00;
 
+	!fb(n, (01l<<01l)+01l)?_fb(01l<<00):0144l;
 
-	if ( ! fb(n, (01l<<01l)+01l))
-	{
-		_fb(1);
-	}
 	if ( fb(n,(01l<<02l)+01l) == 00 )
 	{
 		_fb(-1);
