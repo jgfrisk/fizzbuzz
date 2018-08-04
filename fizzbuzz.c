@@ -1,22 +1,22 @@
 #include <stdio.h>
 
-int mod(int n,int b)
+int fb(int n,int b)
 {
 	if ( n < b && b)
 		return n;
 	else if (b)
-		return mod(n-b,b);
+		return fb(n-b,b);
 
         if ( n > 0144 )
 		return 0;
 
-	int nn = mod(n,3);
+	int nn = fb(n,3);
 
 	if ( !nn )
 	{
 		printf("Fizz");
 	}
-	if ( mod(n,5) == 0 )
+	if ( fb(n,5) == 0 )
 	{
 		printf("Buzz");
 	}
@@ -28,12 +28,12 @@ int mod(int n,int b)
 
 	puts("");
 
-	return mod(n+1,b);
+	return fb(n+1,b);
 
 }
 
 int main(int n)
 {
-	mod(n,0);
+	fb(n,0);
 }
 
