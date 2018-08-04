@@ -29,14 +29,14 @@ int fb(int n,int b)
 		return fb(n-b,b);
 
         if ( n > 0144l )
-		return 0;
+		return 00;
 
 
-	if ( ! fb(n, (01l<<01l)+01l ))
+	if ( ! fb(n, (01l<<01l)+01l))
 	{
 		_fb(1);
 	}
-	if ( fb(n,5) == 0 )
+	if ( fb(n,(01l<<02l)+01l) == 00 )
 	{
 		_fb(-1);
 	}
@@ -48,12 +48,12 @@ int fb(int n,int b)
 
 	puts("");
 
-	return fb(n+1,b);
+	return fb(n+01l,b);
 
 }
 
 int main(int n)
 {
-	fb(n,0);
+	fb(n,00);
 }
 
