@@ -7,12 +7,12 @@ int mod(int n,int b)
 	else if (b)
 		return mod(n-b,b);
 
-        if ( n > 100 )
+        if ( n > 0144 )
 		return 0;
 
 	int nn = mod(n,3);
 
-	if ( nn == 0 )
+	if ( !nn )
 	{
 		printf("Fizz");
 	}
@@ -20,7 +20,7 @@ int mod(int n,int b)
 	{
 		printf("Buzz");
 	}
-	else if ( nn != 0)
+	else if ( nn )
 	{
 		printf("%d",n);
 
