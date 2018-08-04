@@ -1,16 +1,29 @@
 #include <stdio.h>
 
-int main()
+int main(int n)
 {
-        for (int i=1;i<=100;i++)
-        {
-                if ( i % 15 == 0 )
-                        puts("FizzBuzz");
-                else if ( i % 3 == 0 )
-                        puts("Fizz");
-                else if ( i % 5 == 0 )
-                        puts("Buzz");
-                else
-                        printf("%d\n",i);
-        }
+	if ( n > 100 )
+		return 0;
+
+	if ( n % 15 == 0 )
+	{
+		puts("FizzBuzz");
+	}
+	else if ( n % 3 == 0 )
+	{
+		puts("Fizz");
+	}
+	else if ( n % 5 == 0 )
+	{
+		puts("Buzz");
+	}
+	else
+	{
+		printf("%d\n",n);
+	}
+
+	main(n+1);
+
+
 }
+
